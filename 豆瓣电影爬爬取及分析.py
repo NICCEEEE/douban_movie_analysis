@@ -39,6 +39,7 @@ def parse_ajax(raw):
             rate=item['rate'],
             title=item['title'],
             casts=item['casts'],
+            cover=item['cover'],
         )
         infos.append(info)
     return infos
@@ -86,6 +87,7 @@ def valid_movies():
             movies.append(i)
         else:
             unvalid += 1
+    print(movies)
     return movies
 
 
@@ -105,11 +107,11 @@ def rate_rank():
         if rate >= 9:
             awesome += 1
             if rate >= 8.5:
-                great2watch.append({i['title']: rate})
+                great2watch.append({i['title']: rate, 'cover': i['cover']})
         elif rate >= 8:
             great += 1
             if rate >= 8.5:
-                great2watch.append({i['title']: rate})
+                great2watch.append({i['title']: rate, 'cover': i['cover']})
         elif rate >= 7:
             good += 1
         elif rate >= 6:
@@ -121,8 +123,8 @@ def rate_rank():
     good = good / sum
     normal = normal / sum
     bad = bad / sum
-    print('max:', max(*rates))
-    print('min:', min(*rates))
+    # print('max:', max(*rates))
+    # print('min:', min(*rates))
     print('推荐观看：', great2watch)
 
 
@@ -245,5 +247,5 @@ if __name__ == '__main__':
     # all_moive()
     # valid_movies()
     rate_rank()
-    good_directors()
-    good_casts()
+    # good_directors()
+    # good_casts()
