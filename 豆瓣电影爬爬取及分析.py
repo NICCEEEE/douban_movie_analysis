@@ -98,7 +98,7 @@ def get_img(cover, title):
         return
     r = requests.get(cover, headers)
     image = r.content
-    if title == '元气少女缘结神OVA：神明，被丢弃/神明，去泡温泉':
+    if title == '元气少女缘结神OVA：神明，被丢弃/神明，去泡温泉d':
         title = '元气少女'
     with open('img/{}.jpg'.format(title), 'wb') as f:
         f.write(image)

@@ -18,14 +18,74 @@
       <img src="cinema3.png" alt="">
     </div>
     <ul>
-      <li class="active"><span class="glyphicon glyphicon-home"></span> HOME</li>
-      <li><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> 近年电影评分占比</li>
-      <li><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> 哪位导演的电影值得看？</li>
-      <li><span class="glyphicon glyphicon-film" aria-hidden="true"></span> 哪位演员参演的电影评分高？</li>
-      <li><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> 推荐观看的电影</li>
+      <li class="HOME active"><span class="glyphicon glyphicon-home"></span> HOME</li>
+      <li class="First"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> 近年电影评分占比</li>
+      <li class="Second"><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> 哪位导演的电影值得看？</li>
+      <li class="Third"><span class="glyphicon glyphicon-film" aria-hidden="true"></span> 哪位演员参演的电影评分高？</li>
+      <li class="Fourth"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> 推荐观看的电影</li>
     </ul>
   </div>
   <div class="right-content">
+    <div class="HOME">
+      <nav>
+        <div class="left">
+          Admin / DashBoard
+        </div>
+        <div class="right">
+          <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> Welcome !!!
+        </div>
+      </nav>
+      <header>
+        <div id="id-div-all-movie">
+          <span class="info">9976部</span><br><span class="describe">电影总量</span>
+        </div>
+        <div id='id-div-valid-movie'>
+          <span class="info">8291部</span><br><span class="describe">有效电影总量</span>
+        </div>
+        <div id="id-div-type">
+          <span class="info">剧情类</span><br><span class="describe">电影类型</span>
+        </div>
+        <div id="id-div-year">
+          <span class="info">2000-2017</span><br><span class="describe">年份区间</span>
+        </div>
+      </header>
+      <div class="container">
+        <div class="row">
+          <div data-p1='img1' class="col-xs-6 col-md-3 photo">
+            <img src="img/上帝之城.jpg" width="280px" height="400px" alt="...">
+            <br><span>上帝之城</span>
+          </div>
+          <div data-p1='img2' class="col-xs-6 col-md-3 photo">
+            <img src="img/东京教父.jpg" width="280px" height="400px" alt="...">
+            <br><span>东京教父</span>
+          </div>
+          <div data-p1='img3' class="col-xs-6 col-md-3 photo">
+            <img src="img/二手狮王.jpg" width="280px" height="400px" alt="...">
+            <br><span>二手狮王</span>
+          </div>
+        </div>
+        <div class="button">
+          <button id="analysis" type="button" class="btn btn-default btn-lg">
+            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 查看统计
+          </button>
+          <button id='change' class="btn btn-default btn-lg">
+            <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> 换一批
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="First hide">
+      1
+    </div>
+    <div class="Second hide">
+      2
+    </div>
+    <div class="Third hide">
+      3
+    </div>
+    <div class="Fourth hide">
+      4
+    </div>
   </div>
   <!-- 1、电影品质饼图 -->
   <!-- 2、每位好/菜导演的作品评分折线图 -->
@@ -39,6 +99,7 @@
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
   <script src="static/js/bootstrap.min.js"></script>
   <script src="static/js/left.js" charset="utf-8"></script>
+  <script src="static/js/right.js" charset="utf-8"></script>
 </body>
 
 </html>

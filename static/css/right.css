@@ -1,3 +1,112 @@
 .right-content {
+  float: right;
+  position: absolute;
+  left: 260px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+}
+
+.right-content nav {
+  margin: 30px;
+  margin-right: 200px;
+  border:0px solid lightgray;
+  border-radius: 10px;
+  height: 60px;
+  background-color: rgb(248, 248, 248);
+  color: rgb(170, 170, 170);
+  font-size: 20px;
+}
+
+.right-content nav .left {
   float: left;
+  margin: 15px;
+  margin-left: 20px;
+}
+
+@keyframes move {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(-550px, 0);
+  }
+}
+
+.right-content nav .right {
+  float: right;
+  margin: 15px;
+  margin-right: 20px;
+  animation: move infinite;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+.right-content header {
+  margin: 30px;
+  margin-top: 10px;
+  margin-right: 200px;
+  border: 1px solid rgb(248, 248, 248);
+  border-width: thin;
+  border-radius: 10px;
+  height: 100px;
+}
+
+.right-content header div {
+  display: inline-block;
+  margin: 8px 40px;
+  width: 150px;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+}
+
+.right-content header div:hover, .right-content header div:hover span {
+  background-color: rgb(252, 107, 8);
+  color: white;
+}
+
+.right-content header span.info {
+  color: gray;
+  font-weight: bolder;
+  font-size: 23px;
+}
+
+.right-content header span.describe {
+  color: rgb(170, 170, 170);
+  font-weight: bolder;
+  font-size: 13px;
+}
+
+.right-content .container {
+  margin-left: 55px;
+  margin-top: 70px;
+}
+
+.right-content .photo {
+  width: 280px;
+  height: 440px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.button {
+  margin-top: 20px;
+  margin-right: 275px;
+}
+#analysis {
+  float: left;
+}
+
+#change {
+  float: right;
+}
+
+.right-content .hide {
+  display: none;
 }

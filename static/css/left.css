@@ -4,9 +4,11 @@ body {
 
 .left-col {
   width: 260px;
-  height: 1000px;
   background-color: rgb(51, 50, 50);
   float: left;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
 }
 
 .left-img {
