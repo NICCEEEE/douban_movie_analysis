@@ -31,10 +31,10 @@ var photos = [
   '让子弹飞',
 ]
 
-var bindChange = function(){
+var bindChange = function() {
   var list = [1, 2, 3]
   var change = $('#change')
-  change.click(function(){
+  change.click(function() {
     for (var i = 0; i < list.length; i++) {
       var random = Math.floor(Math.random() * 30)
       var name = photos[random]
@@ -48,9 +48,9 @@ var bindChange = function(){
   })
 }
 
-var bindAnalysis = function(){
+var bindAnalysis = function() {
   var btn = $('#analysis')
-  btn.click(function(){
+  btn.click(function() {
     var home = $('li.HOME')
     var nextPage = $('div.First')
     var nextLi = $('li.First')
@@ -64,9 +64,79 @@ var bindAnalysis = function(){
   })
 }
 
-var main = function(){
+var searchData = function(value) {
+  var lis = $('.searchTo>ul li')
+  for (var i = 0; i < lis.length; i++) {
+    if (value === '') {
+      $(lis[i]).show()
+    } else {
+      if ($(lis[i]).text().includes(value)) {
+        $(lis[i]).show()
+      } else {
+        $(lis[i]).hide()
+      }
+    }
+  }
+}
+
+var bindSearch = function() {
+  var input = $('input[name="search"]')
+  input.on('keyup', function() {
+    var value = input.val()
+    searchData(value)
+  })
+}
+
+var bindDirList = function() {
+  var ul = $('ul.list-group')
+  ul.click(function(event){
+    var target = event.target
+    var current = ul.find('li.active')
+    current.removeClass('active')
+    $(target).addClass('active')
+    var works = directors[$(target).text()].work
+    var rates = directors[$(target).text()].rate
+    var optionTwo = {
+        title: {
+            text: '评分曲线图'
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: works
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [
+            {
+                name:'电影评分',
+                type:'line',
+                stack: '总量',
+                data:rates
+            }
+        ]
+    };
+    var myChart = echarts.init(document.getElementById('Analysis_Two'));
+    myChart.clear()
+    myChart.setOption(optionTwo);
+  })
+}
+
+var main = function() {
   bindChange()
   bindAnalysis()
+  bindSearch()
+  bindDirList()
 }
 
 main()
