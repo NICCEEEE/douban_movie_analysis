@@ -110,3 +110,10 @@
 .right-content .hide {
   display: none;
 }
+
+#Analysis_One {
+  width: 800px;
+  height: 500px;
+  margin-left: 100px;
+  margin-top: 50px;
+}

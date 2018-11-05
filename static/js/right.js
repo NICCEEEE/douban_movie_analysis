@@ -58,6 +58,9 @@ var bindAnalysis = function(){
     home.removeClass('active')
     nextPage.removeClass('hide')
     nextLi.addClass('active')
+    var myChart = echarts.init(document.getElementById('Analysis_One'));
+    myChart.clear()
+    myChart.setOption(optionOne);
   })
 }
 

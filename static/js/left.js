@@ -21,8 +21,10 @@ var getAnalysis = function(page) {
 var pageShow = function(){
   var divs = $('.right-content>div')
   for (var i = 0; i < divs.length; i++) {
-    if (!$(divs[i]).hasClass('hide')) {
-      $(divs[i]).addClass('hide')
+    if (!$(divs[i]).hasClass('INFO')) {
+      if (!$(divs[i]).hasClass('hide')) {
+        $(divs[i]).addClass('hide')
+      }
     }
   }
 }
