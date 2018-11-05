@@ -91,6 +91,20 @@ def valid_movies():
     return movies
 
 
+def get_img(cover, title):
+    print('Strat!', title)
+    if os.path.exists('img/{}.jpg'.format(title)):
+        print('exists:', title)
+        return
+    r = requests.get(cover, headers)
+    image = r.content
+    if title == '元气少女缘结神OVA：神明，被丢弃/神明，去泡温泉':
+        title = '元气少女'
+    with open('img/{}.jpg'.format(title), 'wb') as f:
+        f.write(image)
+        print('图片写入成功：', title)
+
+
 # 各区间电影占比
 def rate_rank():
     awesome = 0
@@ -108,10 +122,12 @@ def rate_rank():
             awesome += 1
             if rate >= 8.5:
                 great2watch.append({i['title']: rate, 'cover': i['cover']})
+                get_img(i['cover'], i['title'])
         elif rate >= 8:
             great += 1
             if rate >= 8.5:
                 great2watch.append({i['title']: rate, 'cover': i['cover']})
+                get_img(i['cover'], i['title'])
         elif rate >= 7:
             good += 1
         elif rate >= 6:

@@ -1,0 +1,53 @@
+body {
+  margin: 0px;
+}
+
+.left-col {
+  width: 260px;
+  height: 1000px;
+  background-color: rgb(51, 50, 50);
+  float: left;
+}
+
+.left-img {
+  margin-top: 30px;
+}
+
+.left-col ul {
+  width: inherit;
+  list-style: none;
+  padding-left: 0px;
+  margin-top: 30px;
+}
+
+.left-col ul li {
+  width: inherit;
+  color: white;
+  border: 1px solid black;
+  padding: 10px 0px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.left-col ul li.active {
+  background-color: rgb(74, 73, 73);
+}
+
+.left-col ul li:hover {
+  background-color: rgb(74, 73, 73);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+img[src='cinema3.png'] {
+  animation: rotate 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+}

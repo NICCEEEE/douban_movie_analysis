@@ -4,20 +4,41 @@
 <head>
   <meta charset="utf-8">
   <title>ECharts</title>
+  <link rel="stylesheet" href="static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/left.css">
+  <link rel="stylesheet" href="static/css/right.css">
   <!-- 引入 echarts.js -->
   <script src="https://cdn.bootcss.com/echarts/4.2.0-rc.1/echarts.min.js"></script>
 </head>
 
 <body>
+  <div class="left-col">
+    <div class="left-img">
+      <img src="cinema2.png" alt="error">
+      <img src="cinema3.png" alt="">
+    </div>
+    <ul>
+      <li class="active"><span class="glyphicon glyphicon-home"></span> HOME</li>
+      <li><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> 近年电影评分占比</li>
+      <li><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> 哪位导演的电影值得看？</li>
+      <li><span class="glyphicon glyphicon-film" aria-hidden="true"></span> 哪位演员参演的电影评分高？</li>
+      <li><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> 推荐观看的电影</li>
+    </ul>
+  </div>
+  <div class="right-content">
+  </div>
   <!-- 1、电影品质饼图 -->
   <!-- 2、每位好/菜导演的作品评分折线图 -->
   <!-- 3、每位好/菜演员高/低分作品数量柱状图 -->
   <!-- 4、推荐观看 -->
   <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-  <div id="main" style="width: 600px;height:400px;"></div>
+  <!-- <div id="main" style="width: 600px;height:400px;"></div> -->
   <!-- <script src="演员高分作品量.js" charset="utf-8"></script> -->
   <!-- <script src="导演作品评分折线.js" charset="utf-8"></script> -->
   <!-- <script src="电影品质饼图.js" charset="utf-8"></script> -->
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+  <script src="static/js/bootstrap.min.js"></script>
+  <script src="static/js/left.js" charset="utf-8"></script>
 </body>
 
 </html>
