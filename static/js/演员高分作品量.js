@@ -1,5 +1,4 @@
-var myChart = echarts.init(document.getElementById('main'));
-var option = {
+var optionThree = {
   xAxis: {
     type: 'category',
     data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
@@ -12,4 +11,3 @@ var option = {
     type: 'bar'
   }]
 };
-myChart.setOption(option);
