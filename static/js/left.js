@@ -8,9 +8,12 @@ var getAnalysis = function(page) {
     myChart.clear()
     myChart.setOption(optionOne);
   } else if (page.attr('class') === 'Third') {
-    var myChart = echarts.init(document.getElementById('Analysis_Three'));
-    myChart.clear()
-    myChart.setOption(optionThree);
+    var myChart1 = echarts.init(document.getElementById('Analysis_Three1'));
+    myChart1.clear()
+    myChart1.setOption(optionThree1);
+    var myChart2 = echarts.init(document.getElementById('Analysis_Three2'));
+    myChart2.clear()
+    myChart2.setOption(optionThree2);
   } else if (page.attr('class') === 'Second') {
     var myChart = echarts.init(document.getElementById('Analysis_Two'));
     myChart.clear()

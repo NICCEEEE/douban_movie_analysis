@@ -242,12 +242,13 @@ def good_casts():
     better = []
     bad = []
     for k in better_casts:
-        if better_casts[k][0] >= 4:
+        if better_casts[k][0] >= 8:
             better.append({k: better_casts[k]})
     for v in bad_casts:
-        if bad_casts[v][0] >= 4:
+        if bad_casts[v][0] >= 5:
             bad.append({v: bad_casts[v]})
     print('好演员：', better)
+    print()
     print('辣鸡：', bad)
 
 
@@ -262,6 +263,6 @@ if __name__ == '__main__':
     # get_url()
     # all_moive()
     # valid_movies()
-    rate_rank()
+    # rate_rank()
     # good_directors()
-    # good_casts()
+    good_casts()

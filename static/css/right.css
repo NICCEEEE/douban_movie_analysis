@@ -150,3 +150,11 @@
 .Second ul li.active {
   background-color: rgb(51, 122, 183);
 }
+
+#Analysis_Three1, #Analysis_Three2{
+  width: 1100px;
+  height: 350px;
+  margin-left: -20px;
+  margin-top: -20px;
+  transform: translate(-40px, -60px);
+}
