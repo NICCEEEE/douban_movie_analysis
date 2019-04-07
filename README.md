@@ -5,14 +5,14 @@
 -----
 
 ### HOME页及推荐观看预览
-![page1](http://cwuc.cc/static/preview1.png)
+![page1](http://cwuc.cc/static/images/preview1.png)
 
 ### 电影评分南丁格尔图预览
-![page2](http://cwuc.cc/static/preview2.png)
+![page2](http://cwuc.cc/static/images/preview2.png)
 
 ### 导演评分图预览
-![page3](http://cwuc.cc/static/preview3.png)
+![page3](http://cwuc.cc/static/images/preview3.png)
 
 ### 演员评分图预览
-![page4](http://cwuc.cc/static/preview4.png)
+![page4](http://cwuc.cc/static/images/preview4.png)
 
